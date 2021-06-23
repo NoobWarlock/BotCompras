@@ -1,0 +1,259 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="644,1712" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="37">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Excel.Activities</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.CSV</x:String>
+      <x:String>UiPath.CSV.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="24">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="552,1547" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="vStrArticulo" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
+      <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="Tabla2" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InputDialog Options="{x:Null}" OptionsString="{x:Null}" sap2010:Annotation.AnnotationText="Ingresar Articulo a Bucar" DisplayName="Input Dialog Articlo" sap:VirtualizedContainerService.HintSize="510,82" sap2010:WorkflowViewState.IdRef="InputDialog_1" IsPassword="False" Label="Elige un articulo para buscar" Title="Articulos a Buscar">
+      <ui:InputDialog.Result>
+        <OutArgument x:TypeArguments="x:String">[vStrArticulo]</OutArgument>
+      </ui:InputDialog.Result>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:InputDialog>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Nueva pestaña" sap:VirtualizedContainerService.HintSize="510,1333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" OpenMode="IfNotOpen" Version="V1" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="476,1117" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,226" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="HardwareEvents" Text="[vStrArticulo + &quot;[k(enter)]&quot;]">
+              <uix:NTypeInto.Target>
+                <uix:TargetAnchorable BrowserURL="https://www.mercadolibre.com.mx/" ContentHash="XjWSERzi-UmMeUpxBeEbPQ" DesignTimeRectangle="279, 119, 598, 39" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="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" InformativeScreenshot="adb1fd79c5c31c39ddb5d62c5d363d25.png" Reference="ae-KC9cScUuRnsxlISVu0w/Y7F7NDwyrUCG6XmeGirc8w" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Mercado Libre México' /&gt;" SearchSteps="Selector, Image" />
+              </uix:NTypeInto.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NTypeInto>
+            <uix:NExtractData MaximumResults="{x:Null}" AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column0' Name='Articulo' Sort='None'&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Articulo Url' Sort='None'&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Precio' Sort='None'&gt;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataNextLink' /&gt;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column0' attr='text' name2='Column1' attr2='href'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column2' attr='text'&gt;&lt;webctrl tag='li' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="434,166" sap2010:WorkflowViewState.IdRef="NExtractData_2" InteractionMode="Simulate">
+              <uix:NExtractData.NextLink>
+                <uix:TargetAnchorable ContentHash="wNlE-1z0BEacIhBnUFGtvA" DesignTimeRectangle="377, 111, 885, 11567" FriendlyName="'RECOMENDADOLavadora sem…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;ol' tag='OL' /&gt;" InformativeScreenshot="7dc03a92fdec9b872e6a95d7c2304127.png" Reference="ae-KC9cScUuRnsxlISVu0w/S4QmxdT7HEieQecXHHWDFg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Lavadora | MercadoLibre.com.mx' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.NextLink>
+              <uix:NExtractData.Target>
+                <uix:TargetAnchorable ContentHash="wNlE-1z0BEacIhBnUFGtvA" DesignTimeRectangle="377, 111, 885, 11567" FriendlyName="'RECOMENDADOLavadora sem…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;section&amp;gt;ol' tag='OL' /&gt;" InformativeScreenshot="7dc03a92fdec9b872e6a95d7c2304127.png" Reference="ae-KC9cScUuRnsxlISVu0w/S4QmxdT7HEieQecXHHWDFg" ScopeSelectorArgument="&lt;html app='chrome.exe' title='*| MercadoLibre.com.mx' /&gt;" SearchSteps="Selector" />
+              </uix:NExtractData.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NExtractData>
+            <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="434,460" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="Resultado Articulo.xlsx">
+              <ui:ExcelApplicationScope.Body>
+                <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,351" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="334,132" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_1" Range="A:C" SheetName="Mercado Libre" ShiftCells="False" ShiftOption="ShiftUp" />
+                    <ui:ExcelWriteRange AddHeaders="True" DataTable="[ExtractDataTable]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_1" SheetName="Mercado Libre" StartingCell="A1" />
+                  </Sequence>
+                </ActivityAction>
+              </ui:ExcelApplicationScope.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:ExcelApplicationScope>
+            <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+              <ui:CommentOut.Body>
+                <Sequence DisplayName="Actividades ignoradas" sap:VirtualizedContainerService.HintSize="376,706" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="NGoToUrl_1" Url="https://www.amazon.com.mx/">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NGoToUrl>
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Todos los departamentos'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,226" sap2010:WorkflowViewState.IdRef="NTypeInto_2" InteractionMode="HardwareEvents" Text="[vStrArticulo + &quot;[k(enter)]&quot;]">
+                    <uix:NTypeInto.Target>
+                      <uix:TargetAnchorable BrowserURL="https://www.amazon.com.mx/" ContentHash="2VpRzusJe06kcvezM-RHhQ" DesignTimeRectangle="522, 122, 438, 38" ElementType="InputBox" FriendlyName="'INPUT twotabsearchtextb…'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='text' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' aaname='' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAqCAYAAADF5p5yAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADjSURBVHhe7dWxCYNQAEVRd7CydLwMmd5fOI19fkAkkBUu58Br3gJ3Wbd9mpmZVbdc1zWPMSYAlHzer3t36M7zfG4AaBA6ANKEDoA0oQMgTegASBM6ANKEDoA0oQMgTegASBM6ANKEDoA0oQMgTegASBM6ANKEDoA0oQMgTegASBM6ANKEDoA0oQMgTegASBM6ANKEDoA0oQMgTegASBM6ANKEDoA0oQMgTegASBM6ANKEDoA0oQMgTegASBM6ANKEDoA0oQMgTegASBM6ANL+QneM8dwA0PAL3brt08zMrLl9fgHZ51WQy8CX7wAAAABJRU5ErkJggg==" InformativeScreenshot="b4a570c64a746aa216fb8095ead0d63d.png" Reference="ae-KC9cScUuRnsxlISVu0w/auw5uKbqI0u4tB2dGvf9Qg" ScopeSelectorArgument="&lt;html app='chrome.exe' htmlwindowname='https://images-na.ssl-images-amazon.com/images/I/11EIQ5IGqaL._RC%7C01ZTHTZObnL.css,41DO8IyHTdL.css,31qGOnSAToL.css,013z33uKh2L.css,017DsKjNQJL.css,01L-6KXabGL.css,41EWOOlBJ9L.css,11gKzVUTNZL.css,01ElnPiDxWL.css,11bGSgD5pDL.css,01Dm5eKVxwL.css,01IdKcBuAdL.c*' title='Amazon.com.mx: Precios bajos - Envío rápido - Millones de productos' /&gt;" SearchSteps="Selector, Image">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target DesignTimeRectangle="362, 125, 138, 33" ElementType="Text" FriendlyName="'Todos los departamentos'" FullSelectorArgument="&lt;webctrl id='nav-search-label-id' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='nav-search-label-id' tag='SPAN' type='' aaname='Todos los departamentos' check:text='Todos los departamentos' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NTypeInto.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NTypeInto>
+                  <uix:NExtractData AppendResults="False" ContinueOnError="True" DataTable="[ExtractDataTable]" DisplayName="Extract Table Data" ExtractDataSettings="&lt;Table xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema' Type='Structured'&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column1' Name='Articulo' Sort='None'&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column2' Name='Url Articulo' Sort='None'&gt;&lt;Format xsi:type='TextColumnFormat' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataColumn' ReferenceName='Column3' Name='Precio' Sort='None'&gt;&lt;Format xsi:type='NumberColumnFormat' DecimalSeparator='.' ThousandsSeparator=',' /&gt;&lt;/Column&gt;&lt;Column xsi:type='DataNextLink' /&gt;&lt;/Table&gt;" ExtractMetadata="&lt;extract&gt;&lt;row exact='1'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;/row&gt;&lt;column exact='1' name='Column1' attr='text' name2='Column2' attr2='href'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='h2' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;/column&gt;&lt;column exact='1' name='Column3' attr='text'&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='3' /&gt;&lt;webctrl tag='div' idx='2' /&gt;&lt;webctrl tag='div' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='4' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='div' idx='1' /&gt;&lt;webctrl tag='a' idx='1' /&gt;&lt;webctrl tag='span' idx='1' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;webctrl tag='span' idx='2' /&gt;&lt;/column&gt;&lt;/extract&gt;" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NExtractData_5" InteractionMode="HardwareEvents" LimitExtractionTo="Rows" MaximumResults="300">
+                    <uix:NExtractData.NextLink>
+                      <uix:TargetAnchorable ContentHash="ucD-nDdjYk--ovBtjlkJKA" DesignTimeRectangle="11, -150, 1334, 9323" FriendlyName="'if(window.uet){window.u…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search' tag='DIV' /&gt;" InformativeScreenshot="5d1de2ab34cbf9f161be3c1eee18e704.png" Reference="ae-KC9cScUuRnsxlISVu0w/VtWlKt4xuEioKlnkPSXZmw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com.mx : lavadora' /&gt;" SearchSteps="Selector" />
+                    </uix:NExtractData.NextLink>
+                    <uix:NExtractData.Target>
+                      <uix:TargetAnchorable ContentHash="ucD-nDdjYk--ovBtjlkJKA" DesignTimeRectangle="11, -150, 1334, 9323" FriendlyName="'if(window.uet){window.u…'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div' parentid='search' tag='DIV' /&gt;" InformativeScreenshot="5d1de2ab34cbf9f161be3c1eee18e704.png" Reference="ae-KC9cScUuRnsxlISVu0w/VtWlKt4xuEioKlnkPSXZmw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Amazon.com.mx : lavadora' /&gt;" SearchSteps="Selector" />
+                    </uix:NExtractData.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NExtractData>
+                  <ui:ExcelApplicationScope Password="{x:Null}" CreateNewFile="False" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_2" InstanceCachePeriod="3000" WorkbookPath="Resultado Articulo.xlsx">
+                    <ui:ExcelApplicationScope.Body>
+                      <ActivityAction x:TypeArguments="ui:WorkbookApplication">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Hacer" sap:VirtualizedContainerService.HintSize="376,315" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:ExcelDeleteRange DisplayName="Delete Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelDeleteRange_2" Range="A:C" SheetName="Amazon" ShiftCells="False" ShiftOption="ShiftUp">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:ExcelDeleteRange>
+                          <ui:ExcelWriteRange AddHeaders="True" DataTable="[Tabla2]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_2" SheetName="Amazon" StartingCell="A1">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </ui:ExcelWriteRange>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:ExcelApplicationScope.Body>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:ExcelApplicationScope>
+                </Sequence>
+              </ui:CommentOut.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:CommentOut>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="hffeu5Qz00OuUzcY5N_nVA" IconBase64="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" InformativeScreenshot="666e0efb3e5e973d751f80db6e7b476b.png" Reference="ae-KC9cScUuRnsxlISVu0w/sienaufHv0uY0nXUS0DHXw" Selector="&lt;html app='chrome.exe' title='Mercado Libre México' /&gt;" Url="https://www.mercadolibre.com.mx/" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
